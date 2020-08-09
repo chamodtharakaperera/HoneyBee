@@ -29,5 +29,12 @@ Thushan - Management (Assign new jobs for the employee/Edit new jobs/Delete jobs
 Sachini - Add to Cart/transaction processing/Show shop location to customer using google maps
 
 
+Common Firebase Account
+Email
+nibmfirebase@gmail.com
+Password
+nibmfirebase@123
+
+
 
 
