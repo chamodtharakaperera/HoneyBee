@@ -6,6 +6,10 @@ import android.os.Handler;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.honeybee.adapter.MachineModelAdapter;
+import com.example.honeybee.adapter.MachineTypeAdapter;
+import com.example.honeybee.model.MachineModel;
+import com.example.honeybee.model.MachineType;
 import com.example.honeybee.ui.HoneyBeeSplash;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -18,10 +22,19 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    //UI IMPLEMENTATION
+    RecyclerView mtyperecycler,mrecycler;
+    MachineTypeAdapter machineTypeAdapter;
+    MachineModelAdapter mmadapter;
 
 
     @Override
@@ -43,10 +56,40 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
 
+        //Load Code
+        List<MachineType> machineTypeList = new ArrayList<>();
+        machineTypeList.add(new MachineType("Single Needle",R.drawable.m1));
+        machineTypeList.add(new MachineType("Double Needle",R.drawable.m2));
+        machineTypeList.add(new MachineType("Overlock",R.drawable.m3));
 
+        setMtypeRecycler(machineTypeList);
 
+        List<MachineModel>machineModelList = new ArrayList<>();
+        machineModelList.add(new MachineModel("Single Needle","Rs 25000",R.drawable.m1));
+        machineModelList.add(new MachineModel("Double Needle","Rs 90000",R.drawable.m2));
+        machineModelList.add(new MachineModel("Overlock","Rs 150,000",R.drawable.m3));
+
+        setModelRecycler(machineModelList);
 
     }
+
+    private void setMtypeRecycler(List<MachineType> machineTypeList){
+        mtyperecycler = findViewById(R.id.mtype_recycler);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false);
+        mtyperecycler.setLayoutManager(layoutManager);
+        machineTypeAdapter = new MachineTypeAdapter(this,machineTypeList);
+        mtyperecycler.setAdapter(machineTypeAdapter);
+    }
+
+    private void setModelRecycler(List<MachineModel>machineModelList){
+        mrecycler = findViewById(R.id.mmodel_recycler);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
+        mrecycler.setLayoutManager(layoutManager);
+        mmadapter = new MachineModelAdapter(this,machineModelList);
+        mrecycler.setAdapter(mmadapter);
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
