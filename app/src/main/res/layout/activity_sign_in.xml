@@ -68,7 +68,7 @@
         app:layout_constraintVertical_bias="0.584" />
 
     <TextView
-        android:id="@+id/txtsignuplink"
+        android:id="@+id/txt_singup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autoLink="all"
