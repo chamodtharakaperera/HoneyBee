@@ -1,5 +1,5 @@
 Case study
-//Maa android studio latest version eka neweida? newei wenda athi bn ..= = naha//hapoi
+
 HoneyBee is a food ordering shop management system app which needs splash,sign in,sign up,home,available food items,order processing,transaction processing,reports,
 customer chat, management chat, additionally if we could implement food delivery phase it is better.
 
