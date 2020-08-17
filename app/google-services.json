@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "806419368326",
-    "firebase_url": "https://honeybee-84fe6.firebaseio.com",
-    "project_id": "honeybee-84fe6",
-    "storage_bucket": "honeybee-84fe6.appspot.com"
+    "project_number": "951095917294",
+    "firebase_url": "https://honeybee-d2583.firebaseio.com",
+    "project_id": "honeybee-d2583",
+    "storage_bucket": "honeybee-d2583.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:806419368326:android:b838dd39031f9dcd2fc407",
+        "mobilesdk_app_id": "1:951095917294:android:7559d893b61a4db43011ff",
         "android_client_info": {
-          "package_name": "com.example.honeybee"
+          "package_name": "com.metroapps.honeybee"
         }
       },
       "oauth_client": [
         {
-          "client_id": "806419368326-a9hvs4juksggdj0qs9obhe94vl9b8ecm.apps.googleusercontent.com",
+          "client_id": "951095917294-ng4hvvci4ci0huvvnvtafjatu74nco7k.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCKAaP40rjXjNkhHlmsrit00lFJXSvDpdg"
+          "current_key": "AIzaSyAjGklSpOi4liY4q9cNFf_070DjPLrphLQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "806419368326-a9hvs4juksggdj0qs9obhe94vl9b8ecm.apps.googleusercontent.com",
+              "client_id": "951095917294-ng4hvvci4ci0huvvnvtafjatu74nco7k.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
