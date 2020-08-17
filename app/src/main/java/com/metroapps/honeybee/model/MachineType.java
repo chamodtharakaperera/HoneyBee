@@ -1,4 +1,4 @@
-package com.example.honeybee.model;
+package com.metroapps.honeybee.model;
 
 public class MachineType {
     String name;

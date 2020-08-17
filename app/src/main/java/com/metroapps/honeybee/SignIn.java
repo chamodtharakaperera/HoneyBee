@@ -1,4 +1,4 @@
-package com.example.honeybee;
+package com.metroapps.honeybee;
 
 import androidx.appcompat.app.AppCompatActivity;
 

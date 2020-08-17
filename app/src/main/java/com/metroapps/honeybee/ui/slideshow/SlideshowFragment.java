@@ -1,4 +1,4 @@
-package com.example.honeybee.ui.slideshow;
+package com.metroapps.honeybee.ui.slideshow;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.honeybee.R;
+import com.metroapps.honeybee.R;
 
 public class SlideshowFragment extends Fragment {
 

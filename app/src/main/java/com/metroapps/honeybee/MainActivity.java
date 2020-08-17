@@ -1,18 +1,12 @@
-package com.example.honeybee;
+package com.metroapps.honeybee;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.View;
 import android.view.Menu;
 
-import com.example.honeybee.adapter.MachineModelAdapter;
-import com.example.honeybee.adapter.MachineTypeAdapter;
-import com.example.honeybee.model.MachineModel;
-import com.example.honeybee.model.MachineType;
-import com.example.honeybee.ui.HoneyBeeSplash;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.metroapps.honeybee.adapter.MachineModelAdapter;
+import com.metroapps.honeybee.adapter.MachineTypeAdapter;
+import com.metroapps.honeybee.model.MachineModel;
+import com.metroapps.honeybee.model.MachineType;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;

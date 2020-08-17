@@ -1,4 +1,4 @@
-package com.example.honeybee.ui.slideshow;
+package com.metroapps.honeybee.ui.slideshow;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

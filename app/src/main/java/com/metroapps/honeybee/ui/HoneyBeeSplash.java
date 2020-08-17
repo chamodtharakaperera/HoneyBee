@@ -1,4 +1,4 @@
-package com.example.honeybee.ui;
+package com.metroapps.honeybee.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.honeybee.MainActivity;
-import com.example.honeybee.R;
+import com.metroapps.honeybee.MainActivity;
+import com.metroapps.honeybee.R;
 
 public class HoneyBeeSplash extends AppCompatActivity {
 

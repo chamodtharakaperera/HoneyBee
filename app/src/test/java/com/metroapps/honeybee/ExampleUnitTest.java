@@ -1,4 +1,4 @@
-package com.example.honeybee;
+package com.metroapps.honeybee;
 
 import org.junit.Test;
 

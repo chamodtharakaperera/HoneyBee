@@ -1,4 +1,4 @@
-package com.example.honeybee.adapter;
+package com.metroapps.honeybee.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,8 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.honeybee.R;
-import com.example.honeybee.model.MachineType;
+import com.metroapps.honeybee.R;
+import com.metroapps.honeybee.model.MachineType;
 
 import java.util.List;
 
