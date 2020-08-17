@@ -54,19 +54,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="36dp"
-                android:fontFamily="@font/semibold"
-                android:text="Available food items"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mtype_recycler" />
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/mtype_recycler"
                 android:layout_width="406dp"
@@ -81,11 +68,10 @@
                 android:id="@+id/mmodel_recycler"
                 android:layout_width="414dp"
                 android:layout_height="268dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                tools:layout_editor_absoluteY="339dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
         <!--GUI ENDS HERE-->
 
