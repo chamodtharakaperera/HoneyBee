@@ -3,10 +3,10 @@ package com.metroapps.honeybee;
 import android.os.Bundle;
 import android.view.Menu;
 
-import com.metroapps.honeybee.adapter.MachineModelAdapter;
-import com.metroapps.honeybee.adapter.MachineTypeAdapter;
-import com.metroapps.honeybee.model.MachineModel;
-import com.metroapps.honeybee.model.MachineType;
+import com.metroapps.honeybee.adapter.FoodItemAdapter;
+import com.metroapps.honeybee.adapter.FoodTypeAdapter;
+import com.metroapps.honeybee.model.FoodItem;
+import com.metroapps.honeybee.model.FoodType;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     //UI IMPLEMENTATION
     RecyclerView mtyperecycler,mrecycler;
-    MachineTypeAdapter machineTypeAdapter;
-    MachineModelAdapter mmadapter;
+    FoodTypeAdapter machineTypeAdapter;
+    FoodItemAdapter mmadapter;
 
 
     @Override
@@ -51,35 +51,35 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Load Code
-        List<MachineType> machineTypeList = new ArrayList<>();
-        machineTypeList.add(new MachineType("Single Needle",R.drawable.m1));
-        machineTypeList.add(new MachineType("Double Needle",R.drawable.m2));
-        machineTypeList.add(new MachineType("Overlock",R.drawable.m3));
+        List<FoodType> foodTypeList = new ArrayList<>();
+        foodTypeList.add(new FoodType("Single Needle",R.drawable.m1));
+        foodTypeList.add(new FoodType("Double Needle",R.drawable.m2));
+        foodTypeList.add(new FoodType("Overlock",R.drawable.m3));
 
-        setMtypeRecycler(machineTypeList);
+        setMtypeRecycler(foodTypeList);
 
-        List<MachineModel>machineModelList = new ArrayList<>();
-        machineModelList.add(new MachineModel("Single Needle","Rs 25000",R.drawable.m1));
-        machineModelList.add(new MachineModel("Double Needle","Rs 90000",R.drawable.m2));
-        machineModelList.add(new MachineModel("Overlock","Rs 150,000",R.drawable.m3));
+        List<FoodItem> foodItemList = new ArrayList<>();
+        foodItemList.add(new FoodItem("Single Needle","Rs 25000","Bandula Restaurant",R.drawable.m1));
+        foodItemList.add(new FoodItem("Double Needle","Rs 90000","Bandula Restaurant",R.drawable.m2));
+        foodItemList.add(new FoodItem("Overlock","Rs 150,000","Bandula Restaurant",R.drawable.m3));
 
-        setModelRecycler(machineModelList);
+        setModelRecycler(foodItemList);
 
     }
 
-    private void setMtypeRecycler(List<MachineType> machineTypeList){
-        mtyperecycler = findViewById(R.id.mtype_recycler);
+    private void setMtypeRecycler(List<FoodType> foodTypeList){
+        mtyperecycler = findViewById(R.id.foodTypeRecycler);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false);
         mtyperecycler.setLayoutManager(layoutManager);
-        machineTypeAdapter = new MachineTypeAdapter(this,machineTypeList);
+        machineTypeAdapter = new FoodTypeAdapter(this, foodTypeList);
         mtyperecycler.setAdapter(machineTypeAdapter);
     }
 
-    private void setModelRecycler(List<MachineModel>machineModelList){
-        mrecycler = findViewById(R.id.mmodel_recycler);
+    private void setModelRecycler(List<FoodItem> foodItemList){
+        mrecycler = findViewById(R.id.foodItemRecycler);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
         mrecycler.setLayoutManager(layoutManager);
-        mmadapter = new MachineModelAdapter(this,machineModelList);
+        mmadapter = new FoodItemAdapter(this, foodItemList);
         mrecycler.setAdapter(mmadapter);
     }
 

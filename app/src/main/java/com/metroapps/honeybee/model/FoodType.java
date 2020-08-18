@@ -1,10 +1,10 @@
 package com.metroapps.honeybee.model;
 
-public class MachineType {
+public class FoodType {
     String name;
-    Integer imageUrl;
+    int imageUrl;
 
-    public MachineType(String name, Integer imageUrl) {
+    public FoodType(String name, int imageUrl) {
         this.name = name;
         this.imageUrl = imageUrl;
     }
@@ -17,11 +17,11 @@ public class MachineType {
         this.name = name;
     }
 
-    public Integer getImageUrl() {
+    public int getImageUrl() {
         return imageUrl;
     }
 
-    public void setImageUrl(Integer imageUrl) {
+    public void setImageUrl(int imageUrl) {
         this.imageUrl = imageUrl;
     }
 }

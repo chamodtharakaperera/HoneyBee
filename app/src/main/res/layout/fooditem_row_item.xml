@@ -11,12 +11,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/model_recycler"
+        android:id="@+id/fooditem_recycler"
         android:layout_width="match_parent"
         android:layout_height="152dp">
 
         <ImageView
-            android:id="@+id/machine_model_image"
+            android:id="@+id/foodItemImage"
             android:layout_width="150dp"
             android:layout_height="152dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -24,42 +24,42 @@
             app:srcCompat="@drawable/m1" />
 
         <TextView
-            android:id="@+id/modelname"
+            android:id="@+id/foodItemHotel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/semibold"
-            android:text="Machine Model Name"
+            android:text="Food Item Hotel"
             android:textColor="#091020"
             android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@+id/machine_model_image"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/foodItemImage"
+            app:layout_constraintTop_toBottomOf="@+id/foodItemTitle" />
 
         <TextView
-            android:id="@+id/modelprice"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
-            android:fontFamily="@font/semibold"
-            android:text="Model Price"
-            android:textColor="#091020"
-            android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@+id/machine_model_image"
-            app:layout_constraintTop_toBottomOf="@+id/modelname" />
-
-        <TextView
-            android:id="@+id/machinemodelname"
+            android:id="@+id/foodItemPrice"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/semibold"
-            android:text="Toshiba"
+            android:text="Food Item Price"
+            android:textColor="#091020"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/foodItemImage"
+            app:layout_constraintTop_toBottomOf="@+id/foodItemHotel" />
+
+        <TextView
+            android:id="@+id/foodItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/semibold"
+            android:text="Food Item Name"
             android:textColor="#FF9800"
             android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@+id/machine_model_image"
+            app:layout_constraintStart_toEndOf="@+id/foodItemImage"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
