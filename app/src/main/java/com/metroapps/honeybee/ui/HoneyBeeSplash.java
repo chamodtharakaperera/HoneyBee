@@ -8,6 +8,7 @@ import android.os.Handler;
 
 import com.metroapps.honeybee.MainActivity;
 import com.metroapps.honeybee.R;
+import com.metroapps.honeybee.SignIn;
 
 public class HoneyBeeSplash extends AppCompatActivity {
 
@@ -17,7 +18,7 @@ public class HoneyBeeSplash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_honey_bee_splash);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
         //Splash code
         //Code to start timer and take action after the timer ends
@@ -25,7 +26,7 @@ public class HoneyBeeSplash extends AppCompatActivity {
             @Override
             public void run() {
                 //Do any action here. Now we are moving to next page
-                Intent mySuperIntent = new Intent(HoneyBeeSplash.this, MainActivity.class);
+                Intent mySuperIntent = new Intent(HoneyBeeSplash.this, SignIn.class);
                 startActivity(mySuperIntent);
 
                 //This 'finish()' is for exiting the app when back button pressed from Home page which is ActivityHome

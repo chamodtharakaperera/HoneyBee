@@ -18,13 +18,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.FoodItemInserter">
-
-        </activity>
-        <activity android:name=".ui.FoodTypeInserter">
-
-
-        </activity>
+        <activity android:name=".ui.AdminHome"></activity>
+        <activity android:name=".ui.FoodItemInserter"></activity>
+        <activity android:name=".ui.FoodTypeInserter"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -41,26 +37,20 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"></activity>
         -->
-        <activity android:name=".SignUp">
-
+        <activity android:name=".SignUp"></activity>
+        <!--
+<activity android:name=".SignIn">
         </activity>
-
-        <!--<activity android:name=".SignIn">
-        </activity> -->
-
+        -->
         <activity android:name=".SalesReport" />
-        <activity android:name=".ReportActivity">
-
-        </activity>
+        <activity android:name=".ReportActivity"></activity>
         <activity android:name=".MapsActivity" />
-
         <activity android:name=".MainActivity" />
-
         <activity
             android:name=".SignIn"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ui.HoneyBeeSplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
