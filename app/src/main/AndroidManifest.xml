@@ -32,15 +32,16 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <!--
+
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity> -->
+            android:label="@string/title_activity_maps"></activity>
         <activity android:name=".SignUp"></activity>
-        <activity android:name=".SignIn"></activity>
+        <!-- <activity android:name=".SignIn"></activity> -->
         <activity android:name=".SalesReport"></activity>
         <activity android:name=".ReportActivity"></activity>
-        <activity android:name=".MapsActivity">
+
+        <activity android:name=".SignIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
