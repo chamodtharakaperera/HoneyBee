@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class SignIn extends AppCompatActivity {
     private TextView singin;
     private EditText uname, pass;
     private Button login;
+    private ImageButton userloc;
     final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
     String connectionURL = null;
@@ -41,12 +43,21 @@ public class SignIn extends AppCompatActivity {
         uname = findViewById( R.id.txtUName );
         pass = findViewById( R.id.txtPwd );
         login = findViewById( R.id.btn_signIn );
+        userloc = findViewById( R.id.btnloc );
 
         singin.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent a = new Intent( getBaseContext(), SignUp.class );
                 startActivity( a );
+            }
+        } );
+
+        userloc.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent b = new Intent( getBaseContext(), MapsActivity.class );
+                startActivity( b );
             }
         } );
 
@@ -101,16 +112,16 @@ public class SignIn extends AppCompatActivity {
                                 {
                                     Toast.makeText(getApplicationContext(), "Access Granted", Toast.LENGTH_LONG).show();
 
-                                    /*Intent d = new Intent(getApplicationContext(), MainActivity.class);
-                                    d.putExtra("email", mail);
-                                    startActivity(d);*/
                                     if(type == 1)
                                     {
-                                        Toast.makeText(getApplicationContext(), "Welcome User", Toast.LENGTH_LONG).show();
+                                        //Toast.makeText(getApplicationContext(), "Welcome User", Toast.LENGTH_LONG).show();
+                                        Intent d = new Intent(getApplicationContext(), MainActivity.class);
+                                        d.putExtra("nuser", username);
+                                        startActivity(d);
                                     }
                                     else if(type == 2)
                                     {
-                                        Toast.makeText(getApplicationContext(), "Welcome Admin", Toast.LENGTH_LONG).show();
+                                        //Toast.makeText(getApplicationContext(), "Welcome Admin", Toast.LENGTH_LONG).show();
                                     }
                                 }
                                 else
@@ -127,11 +138,10 @@ public class SignIn extends AppCompatActivity {
                         }
                         catch(SQLException e1)
                         {
-                            singin.setText( "SQL Database Error");
+                            Log.e("MYAPP", "exception", e1);
                         }
                         catch(Exception e)
                         {
-                            singin.setText( "Unknown Error(s)" );
                             Log.e("MYAPP", "exception", e);
                         }
 

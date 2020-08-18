@@ -1,9 +1,12 @@
 package com.metroapps.honeybee;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference myRef;
     private DatabaseReference myRefAsia;
 
+    private TextView usename, data;
+    private ImageButton location;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+
+        Intent unerlog = getIntent();
+        String nuname = unerlog.getStringExtra( "nuser" );
 
         //Load Code
         List<FoodType> foodTypeList = new ArrayList<>();
@@ -109,6 +118,22 @@ public class MainActivity extends AppCompatActivity {
 
             }
 */
+        View header = navigationView.getHeaderView( 0 );
+        usename = (TextView)header.findViewById( R.id.nav_uname );
+        usename.setText("User");
+        data = (TextView)header.findViewById( R.id.nav_utype );
+        data.setText( nuname );
+        location = (ImageButton)header.findViewById( R.id.btn_location );
+
+        location.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent loc = new Intent(getApplicationContext(), MapsActivity.class);
+                startActivity(loc);
+            }
+        } );
+
     }
 
     private void setFoodTypeRecycler(List<FoodType> foodTypeList) {
