@@ -35,7 +35,7 @@ public class SignIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
 
 
@@ -121,7 +121,7 @@ public class SignIn extends AppCompatActivity {
                                     }
                                     else if(type == 2)
                                     {
-                                        //Toast.makeText(getApplicationContext(), "Welcome Admin", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(), "Welcome Admin", Toast.LENGTH_LONG).show();
                                     }
                                 }
                                 else
