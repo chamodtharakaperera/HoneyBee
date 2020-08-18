@@ -38,6 +38,8 @@
             android:label="@string/title_activity_maps"></activity> -->
         <activity android:name=".SignUp"></activity>
         <activity android:name=".SignIn"></activity>
+        <activity android:name=".SalesReport"></activity>
+        <activity android:name=".ReportActivity"></activity>
         <activity android:name=".MapsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
