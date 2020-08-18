@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,21 +47,21 @@ public class FoodTypeInserter extends AppCompatActivity {
 
         Folder = FirebaseStorage.getInstance().getReference().child("ImageFolder");
 
-        //jumptonext();
+        jumptonext();
     }
 
-    /*
-        private void jumptonext() {
-            Button btnh = findViewById(R.id.btnSwitch);
-            Intent intent = new Intent(this, MainActivity2.class);
-            btnh.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivity(new Intent(MainActivity.this, MainActivity2.class));
-                }
-            });
-        }
-    */
+
+    private void jumptonext() {
+        Button btnh = findViewById(R.id.btnSwitch);
+        Intent intent = new Intent(this, FoodItemInserter.class);
+        btnh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(FoodTypeInserter.this, FoodItemInserter.class));
+            }
+        });
+    }
+
     public void UploadData(View view) {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");

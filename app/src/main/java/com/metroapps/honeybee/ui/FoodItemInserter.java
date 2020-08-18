@@ -48,17 +48,17 @@ public class FoodItemInserter extends AppCompatActivity {
 
 
     }
-    /*
+
     private void buttonClicked() {
         Button btn2 = findViewById(R.id.button2);
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this, FoodTypeInserter.class);
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity2.this,MainActivity.class));
+                startActivity(new Intent(FoodItemInserter.this, FoodTypeInserter.class));
             }
         });
-    }*/
+    }
 
 
     public void uploadValues(View view) {
