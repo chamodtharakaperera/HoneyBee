@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.metroapps.honeybee.R;
 import com.metroapps.honeybee.model.FoodType;
 
@@ -46,8 +47,8 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.FoodTy
 
     @Override
     public void onBindViewHolder(@NonNull FoodTypeViewHolder holder, int position) {
-        //holder.foodTypeImage.setImageResource(foodTypeList.get(position).getImageUrl());
         holder.foodTypeName.setText(foodTypeList.get(position).getName());
+        Glide.with(context).load(foodTypeList.get(position).getImageUrl()).into(holder.foodTypeImage);
     }
 
     @Override

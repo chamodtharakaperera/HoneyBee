@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.metroapps.honeybee.ui.FoodTypeInserter;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -108,6 +110,9 @@ public class SignIn extends AppCompatActivity {
                                         startActivity(d);
                                     } else if (type == 2) {
                                         Toast.makeText(getApplicationContext(), "Welcome Admin", Toast.LENGTH_LONG).show();
+                                        Intent e = new Intent(getApplicationContext(), FoodTypeInserter.class);
+                                        e.putExtra("nuser", username);
+                                        startActivity(e);
                                     }
                                 } else {
                                     Toast.makeText(getApplicationContext(), "Incorrect Password", Toast.LENGTH_LONG).show();
