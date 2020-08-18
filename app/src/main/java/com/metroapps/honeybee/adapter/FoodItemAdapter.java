@@ -49,7 +49,7 @@ public class FoodItemAdapter extends RecyclerView.Adapter<FoodItemAdapter.FoodIt
     @Override
     public void onBindViewHolder(@NonNull FoodItemViewHolder holder, int position) {
 
-        holder.foodItemImage.setImageResource(foodItemList.get(position).getImageUrl());
+       // holder.foodItemImage.setImageResource(foodItemList.get(position).getImageUrl());
         holder.name.setText(foodItemList.get(position).getName());
         holder.price.setText(foodItemList.get(position).getPrice());
         holder.restaurant.setText(foodItemList.get(position).getRestaurantName());

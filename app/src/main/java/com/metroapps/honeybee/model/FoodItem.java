@@ -3,9 +3,16 @@ package com.metroapps.honeybee.model;
 public class FoodItem {
     String name, price;
     String restaurantName;
-    int imageUrl;
+    String imageUrl;
 
-    public FoodItem(String name, String price, String restaurantName, int imageUrl) {
+    public FoodItem(String name, String price, String restaurantName, String imageUrl) {
+        this.name = name;
+        this.price = price;
+        this.restaurantName = restaurantName;
+        this.imageUrl = imageUrl;
+    }
+
+    public FoodItem() {
         this.name = name;
         this.price = price;
         this.restaurantName = restaurantName;
@@ -36,11 +43,11 @@ public class FoodItem {
         this.restaurantName = restaurantName;
     }
 
-    public int getImageUrl() {
+    public String getImageUrl() {
         return imageUrl;
     }
 
-    public void setImageUrl(int imageUrl) {
+    public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
 }
