@@ -69,10 +69,10 @@ public class MainActivity extends AppCompatActivity {
         String un = nu.getStringExtra("nuser");
 
         View header = navigationView.getHeaderView(0);
-        txt1 = (TextView)header.findViewById( R.id.nav_uname );
-        txt1.setText( "User" );
-        txt2 = (TextView)header.findViewById( R.id.nav_utype );
-        txt2.setText( un );
+        txt1 = (TextView) header.findViewById(R.id.nav_uname);
+        txt1.setText("User");
+        txt2 = (TextView) header.findViewById(R.id.nav_utype);
+        txt2.setText(un);
 
 /*
         //Load Code
