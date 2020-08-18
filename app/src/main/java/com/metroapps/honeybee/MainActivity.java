@@ -1,7 +1,10 @@
 package com.metroapps.honeybee;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -14,6 +17,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.metroapps.honeybee.adapter.FoodItemAdapter;
 import com.metroapps.honeybee.adapter.FoodTypeAdapter;
 import com.metroapps.honeybee.model.FoodItem;
@@ -23,6 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    TextView msg;
 
     private AppBarConfiguration mAppBarConfiguration;
     //UI IMPLEMENTATION
@@ -30,9 +39,13 @@ public class MainActivity extends AppCompatActivity {
     FoodTypeAdapter foodTypeAdapter;
     FoodItemAdapter foodItemAdapter;
 
+    //Firebase
+    private DatabaseReference myRef;
+    private DatabaseReference myRefAsia;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -64,7 +77,38 @@ public class MainActivity extends AppCompatActivity {
         foodItemList.add(new FoodItem("Overlock", "Rs 150,000", "Bandula Restaurant", R.drawable.m3));
 
         setFoodItemRecycler(foodItemList);
+/*
+        // now here we will add some dummy data to out model class
+        final List<FoodItem> FoodItemList = new ArrayList<>();
 
+        //Firebase
+        myRef = FirebaseDatabase.getInstance().getReference();
+        Query query = myRef.child("fooditem");
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                ClearAll();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    FoodType foodType = new FoodType();
+                    foodType.setImageUrl(snapshot.child("imageurl").getValue().toString());
+                    foodType.setName(snapshot.child("name").getValue().toString());
+
+                    popularFoodList.add(popular);
+                }
+
+            }
+
+            private void ClearAll() {
+                if (popularFoodList != null) {
+                    popularFoodList.clear();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+*/
     }
 
     private void setFoodTypeRecycler(List<FoodType> foodTypeList) {
@@ -97,4 +141,37 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
+/*
+    public void buget(View view) {
+
+        Log.v("Hi all", "Failed to read value.");
+        /*
+        msg = findViewById(R.id.dbTest);
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("message");
+
+        myRef.setValue(msg.getText().toString());
+
+        // Read from the database
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                String value = dataSnapshot.getValue(String.class);
+                //Log.d(TAG, "Value is: " + value);
+                msg.setText(value);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                //Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+    }*/
 }
