@@ -2,10 +2,15 @@ package com.metroapps.honeybee.model;
 
 public class FoodType {
     String name;
-    int imageUrl;
+    String imageUrl;
 
 
-    public FoodType(String name, int imageUrl) {
+    public FoodType(String name, String imageUrl) {
+        this.name = name;
+        this.imageUrl = imageUrl;
+    }
+
+    public FoodType() {
         this.name = name;
         this.imageUrl = imageUrl;
     }
@@ -18,11 +23,11 @@ public class FoodType {
         this.name = name;
     }
 
-    public int getImageUrl() {
+    public String getImageUrl() {
         return imageUrl;
     }
 
-    public void setImageUrl(int imageUrl) {
+    public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
 }
