@@ -4,6 +4,7 @@ public class FoodType {
     String name;
     int imageUrl;
 
+
     public FoodType(String name, int imageUrl) {
         this.name = name;
         this.imageUrl = imageUrl;
