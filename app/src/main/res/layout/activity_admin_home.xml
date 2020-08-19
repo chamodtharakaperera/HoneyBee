@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8BC34A"
+    android:backgroundTint="#FFFFFF"
     tools:context=".ui.AdminHome">
 
     <TextView
@@ -11,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:background="#9C27B0"
         android:text="Welcome Administrator !"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="168dp"
+        android:background="#FF9800"
         android:onClick="foodinsert"
         android:text="Own Food Inserter"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="196dp"
+        android:background="#4CAF50"
         android:onClick="annualRep"
         android:text="Annual Report"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,8 +51,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="68dp"
-        android:text="Food From Other Shops Inserter"
+        android:background="#FF9800"
         android:onClick="otherShops"
+        android:text="Food From Other Shops Inserter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnFoodInserter" />
 </androidx.constraintlayout.widget.ConstraintLayout>

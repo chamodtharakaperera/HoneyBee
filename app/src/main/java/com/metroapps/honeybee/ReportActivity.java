@@ -41,7 +41,7 @@ public class ReportActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String yearVal2 = year2.getText().toString();
 
-                Intent rep1 = new Intent(ReportActivity.this, SalesReport.class);
+                Intent rep1 = new Intent(ReportActivity.this, Order_Report.class);
                 rep1.putExtra("salesyr2", yearVal2);
                 startActivity(rep1);
 
