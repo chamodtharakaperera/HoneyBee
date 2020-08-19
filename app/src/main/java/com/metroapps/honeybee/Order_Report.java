@@ -63,7 +63,7 @@ public class Order_Report extends AppCompatActivity {
             con = DriverManager.getConnection(connectionURL);
 
 
-            String query = "select mn.MName, coalesce(a.OrderCount,0) as OrderCounut from (select month(Orderdate) as MonthNo, count(*) as OrderCount from Orders where year(OrderDate)='"+ year +"' group by month(Orderdate)) a full join MonthVal mn on a.MonthNo = mn.MNo order by mn.MNo;";
+            String query = "select mn.MName, coalesce(a.OrderCount,0) as OrderCounut from (select month(Orderdate) as MonthNo, count(*) as OrderCount from Orders where year(OrderDate)='"+ year +"' group by month(Orderdate)) a full join MonthVal mn on a.MonthNo = mn.MNo order by mn.MNo";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
