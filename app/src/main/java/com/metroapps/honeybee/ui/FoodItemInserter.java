@@ -107,4 +107,10 @@ public class FoodItemInserter extends AppCompatActivity {
         }
 
     }
+
+    public void back(View view) {
+        Intent hell = new Intent(getBaseContext(), FoodTypeInserter.class);
+        startActivity(hell);
+
+    }
 }

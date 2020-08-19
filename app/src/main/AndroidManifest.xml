@@ -20,7 +20,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Order_Report"></activity>
         <activity android:name=".ui.AdminHome" />
-        <activity android:name=".ui.FoodItemInserter" />
+        <activity android:name=".ui.FoodItemInserter">
+
+        </activity>
         <activity android:name=".ui.FoodTypeInserter" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -52,6 +54,7 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ui.HoneyBeeSplash">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

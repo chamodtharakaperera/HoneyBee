@@ -10,26 +10,24 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
         android:text="Name"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/txtName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
         android:text="Price"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/txtPrice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
@@ -51,52 +49,56 @@
         app:layout_constraintBottom_toTopOf="@+id/txtRest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtRating" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRating"
+        app:layout_constraintVertical_bias="0.64" />
 
     <EditText
         android:id="@+id/txtName"
-        android:layout_width="349dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtPrice"
+        android:layout_width="353dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/editround"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPrice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintHorizontal_bias="0.596"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtPrice"
-        android:layout_width="349dp"
-        android:layout_height="49dp"
+        android:layout_width="345dp"
+        android:layout_height="61dp"
         android:layout_marginBottom="92dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtRating"
+        android:padding="20dp"
         android:background="@drawable/editround"
+        app:layout_constraintBottom_toTopOf="@+id/txtRating"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtRating"
-        android:layout_width="349dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="124dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtRest"
+        android:layout_width="345dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="92dp"
+        android:padding="20dp"
         android:background="@drawable/editround"
+        app:layout_constraintBottom_toTopOf="@+id/txtRest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtRest"
-        android:layout_width="349dp"
-        android:layout_height="49dp"
+        android:layout_width="353dp"
+        android:layout_height="52dp"
         android:layout_marginStart="37dp"
-        android:layout_marginTop="494dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="188dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="184dp"
+        android:padding="20dp"
         android:background="@drawable/editround"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnUpdate"
@@ -117,13 +119,14 @@
         android:id="@+id/button2"
         android:layout_width="185dp"
         android:layout_height="53dp"
-        android:text="Jump to popular"
         android:background="@drawable/editround"
+        android:onClick="back"
+        android:text="Back To Shop Food"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.415"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toEndOf="@+id/btnUpdate"
         app:layout_constraintTop_toBottomOf="@+id/txtRest"
-        app:layout_constraintVertical_bias="0.533" />
+        app:layout_constraintVertical_bias="0.557" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
