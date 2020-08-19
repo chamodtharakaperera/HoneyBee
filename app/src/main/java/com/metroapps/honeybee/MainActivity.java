@@ -76,15 +76,14 @@ public class MainActivity extends AppCompatActivity {
 
         msg.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
 
                 Intent smsIntent = new Intent(Intent.ACTION_VIEW);
 
                 smsIntent.setData(Uri.parse("0771825536"));
                 smsIntent.setType("vnd.android-dir/mms-sms");
-                smsIntent.putExtra("address"  , new String ("01234"));
-                smsIntent.putExtra("sms_body"  , "Test ");
+                smsIntent.putExtra("address", new String("0710689099"));
+                smsIntent.putExtra("sms_body", "Hello world this is the Honey Bee Food Systems ");
 
                 try {
                     startActivity(smsIntent);
