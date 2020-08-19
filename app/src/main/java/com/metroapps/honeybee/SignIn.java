@@ -110,9 +110,9 @@ public class SignIn extends AppCompatActivity {
                                         d.putExtra("nuser", username);
                                         startActivity(d);
                                     } else if (type == 2) {
-                                        Toast.makeText(getApplicationContext(), "Welcome Admin", Toast.LENGTH_LONG).show();
+                                        //Toast.makeText(getApplicationContext(), "Welcome Admin", Toast.LENGTH_LONG).show();
                                         Intent e = new Intent(getApplicationContext(), AdminHome.class);
-                                        e.putExtra("nuser", username);
+                                        e.putExtra("nuser2", username);
                                         startActivity(e);
                                     }
                                 } else {

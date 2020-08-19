@@ -76,6 +76,9 @@ public class SignUp extends AppCompatActivity {
                     Statement st2 = con.createStatement();
                     st2.executeUpdate(query1);
                     con.close();
+
+                    Intent bl = new Intent(getApplicationContext(), SignIn.class);
+                    startActivity(bl);
                 }
             } catch (SQLException e1) {
                 Log.e("MYAPP", "exception", e1);
@@ -84,6 +87,13 @@ public class SignUp extends AppCompatActivity {
             }
         }
 
+        reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent bl2 = new Intent(getApplicationContext(), SignIn.class);
+                startActivity(bl2);
+            }
+        });
 
     }
 
