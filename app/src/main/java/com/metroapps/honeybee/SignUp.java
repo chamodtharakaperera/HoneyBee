@@ -82,21 +82,25 @@ public class SignUp extends AppCompatActivity {
                         ResultSet rs2 = st2.executeQuery(query2);
                         while (rs2.next()) {
                             k = 1;
-                            //Toast.makeText(getApplicationContext(), "Workiing", Toast.LENGTH_LONG).show();
+
                         }
-                        con.close();
+                        //con.close();
+
+                        int tp = Integer.parseInt(no.getText().toString());
 
                         if (k == 1) {
                             Toast.makeText(getApplicationContext(), "Username already taken", Toast.LENGTH_SHORT).show();
                         } else if (k == 0) {
-                            String query3 = "insert into Singup(uemail, upassword, mobileno) values('" + username + "','" + pw.getText().toString() + "','" + no.getText().toString() + "')";
+                            String query3 = "insert into Singup(uemail, upassword, mobileno) values('" + username + "','" + pw.getText().toString() + "','" + tp + "')";
                             Statement st3 = con.createStatement();
                             st3.executeUpdate(query3);
-                            con.close();
+                            //con.close();
 
-                            Intent bl = new Intent(getApplicationContext(), SignIn.class);
-                            startActivity(bl);
+                            /*Intent bl = new Intent(getApplicationContext(), SignIn.class);
+                            startActivity(bl);*/
                         }
+
+                        con.close();
                     } catch (SQLException e1) {
                         Log.e("MYAPP", "exception", e1);
                     } catch (Exception e) {
