@@ -19,11 +19,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Order_Report"></activity>
-        <activity android:name=".ui.AdminHome" />
-        <activity android:name=".ui.FoodItemInserter">
+        <activity android:name=".MainChatActivity"></activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
+        <activity android:name=".Order_Report" />
+        <activity android:name=".ui.AdminHome" />
+        <activity android:name=".ui.FoodItemInserter" />
         <activity android:name=".ui.FoodTypeInserter" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -56,11 +64,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ui.HoneyBeeSplash">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
