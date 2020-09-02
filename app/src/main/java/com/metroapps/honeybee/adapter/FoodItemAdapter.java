@@ -1,6 +1,7 @@
 package com.metroapps.honeybee.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.metroapps.honeybee.Details;
 import com.metroapps.honeybee.R;
 import com.metroapps.honeybee.model.FoodItem;
 
@@ -53,6 +55,16 @@ public class FoodItemAdapter extends RecyclerView.Adapter<FoodItemAdapter.FoodIt
         holder.price.setText(foodItemList.get(position).getPrice());
         holder.restaurant.setText(foodItemList.get(position).getRestaurantName());
         Glide.with(context).load(foodItemList.get(position).getImageUrl()).into(holder.foodItemImage);
+
+        //Onclick navigate to food description
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context, Details.class);
+                context.startActivity(i);
+            }
+        });
+
     }
 
     @Override
