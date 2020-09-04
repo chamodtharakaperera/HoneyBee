@@ -28,6 +28,7 @@ import com.metroapps.honeybee.adapter.FoodItemAdapter;
 import com.metroapps.honeybee.adapter.FoodTypeAdapter;
 import com.metroapps.honeybee.model.FoodItem;
 import com.metroapps.honeybee.model.FoodType;
+import com.metroapps.honeybee.ui.AdminHome;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -232,5 +233,10 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void chatApp(View view) {
+        Intent chat = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(chat);
     }
 }

@@ -128,6 +128,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="152dp"
+            android:layout_height="64dp"
+            android:background="@drawable/editround"
+            android:backgroundTint="@color/green"
+            android:onClick="chatApp"
+            android:text="FAQ Chat"
+            app:layout_constraintBottom_toBottomOf="@+id/foodItemRecycler"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.922"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foodItemTextView"
+            app:layout_constraintVertical_bias="0.865" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
