@@ -10,6 +10,7 @@ public class Details extends AppCompatActivity {
 
     ImageView image;
     TextView title;
+    TextView price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,12 @@ public class Details extends AppCompatActivity {
 
         setTitle();
         setImage();
+        setPrice();
+    }
+
+    private void setPrice() {
+        price = findViewById(R.id.textView14);
+        price.setText("Price"+getIntent().getStringExtra("eprice"));
     }
 
     private void setTitle() {
