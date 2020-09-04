@@ -12,28 +12,37 @@ public class Details extends AppCompatActivity {
     TextView title;
     TextView price;
 
+
+    TextView ytitle;
+    TextView yprice;
+    ImageView yimage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        setTitle();
-        setImage();
-        setPrice();
+
+
+        setyTitle();
+        setyPrice();
+        setyImage();
     }
 
-    private void setPrice() {
-        price = findViewById(R.id.textView14);
-        price.setText("Price"+getIntent().getStringExtra("eprice"));
-    }
-
-    private void setTitle() {
-        title= findViewById(R.id.textView11);
-        title.setText("Name"+getIntent().getStringExtra("ename"));
-    }
-
-    private void setImage() {
+    private void setyImage() {
         image = findViewById(R.id.actImage);
-        image.setImageResource(getIntent().getIntExtra("eimage",R.drawable.splimg));
+        image.setImageResource(getIntent().getIntExtra("yimage",R.drawable.splimg));
     }
+
+    private void setyPrice() {
+        title= findViewById(R.id.textView14);
+        title.setText(""+getIntent().getStringExtra("yprice"));
+    }
+
+    private void setyTitle() {
+        title= findViewById(R.id.textView11);
+        title.setText(""+getIntent().getStringExtra("yname"));
+    }
+
+
 }
