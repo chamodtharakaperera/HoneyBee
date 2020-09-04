@@ -28,6 +28,7 @@
         <activity android:name=".ui.AdminHome" />
         <activity android:name=".ui.FoodItemInserter" />
         <activity android:name=".ui.FoodTypeInserter" />
+        <activity android:name=".CartActivity"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

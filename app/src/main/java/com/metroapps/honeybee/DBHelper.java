@@ -27,15 +27,14 @@ public class DBHelper extends SQLiteOpenHelper
 
     }
 
-    public void insertCart(String fname)
+    public void insertCart(String fname, int uprice)
     {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put( "FoodName", fname );
-        cv.put( "UnitPrice", 5 );
+        cv.put( "UnitPrice", uprice );
         cv.put( "Quantity", 1 );
-        double tot = 5 * 1;
-        cv.put( "ItemTot", tot );
+        cv.put( "ItemTot", uprice );
         db.insert( "Cart", null, cv );
 
     }
@@ -45,5 +44,12 @@ public class DBHelper extends SQLiteOpenHelper
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM Cart", null);
         return c;
+    }
+
+    public Cursor getTotal()
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor d = db.rawQuery("SELECT sum(ItemTot) FROM Cart", null);
+        return d;
     }
 }

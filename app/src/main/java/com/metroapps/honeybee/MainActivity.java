@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference myRefAsia;
 
     private TextView txt1, txt2;
-    private ImageButton call, loc2, msg;
+    private ImageButton call, loc2, msg, cart;
 
 
     @Override
@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         call = findViewById(R.id.btn_call);
         loc2 = findViewById(R.id.btn_location2);
         msg = findViewById(R.id.btn_message);
+        cart = findViewById(R.id.btn_cart);
 
         call.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
 
                 smsIntent.setData(Uri.parse("0771825536"));
                 smsIntent.setType("vnd.android-dir/mms-sms");
@@ -92,8 +93,15 @@ public class MainActivity extends AppCompatActivity {
                 } catch (android.content.ActivityNotFoundException ex) {
                     Toast.makeText(MainActivity.this,
                             "SMS faild, please try again later.", Toast.LENGTH_SHORT).show();
-                }*/
+                }
 
+
+            }
+        });
+
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent cart = new Intent(getApplicationContext(), CartActivity.class);
                 startActivity(cart);
             }

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.metroapps.honeybee.adapter.CartAdapter;
@@ -18,6 +19,7 @@ public class CartActivity extends AppCompatActivity {
 
     private RecyclerView cart;
     private RecyclerView.Adapter adapter;
+    private TextView tot;
     DBHelper db;
 
     @Override
@@ -35,12 +37,21 @@ public class CartActivity extends AppCompatActivity {
 
         adapter = new CartAdapter(carts3);
         this.cart.setAdapter( adapter );
+
+        tot = findViewById(R.id.txtTotal);
+        Cursor d = db.getTotal();
+        if (d != null && d.moveToFirst())
+        {
+            do
+            {
+                int total = d.getInt( 0 );
+                tot.setText(String.valueOf(total));
+            } while (d.moveToNext());
+        }
     }
 
     private ArrayList<Cart> initCart() {
         ArrayList<Cart> cartlist = new ArrayList<>();
-
-        // Start  of new code
 
         Cursor c = db.getCartData();
         String fname = null;
@@ -49,7 +60,6 @@ public class CartActivity extends AppCompatActivity {
         {
             do
             {
-                //pw = c.getString(1);
                 fname = c.getString( 0 );
                 qty = c.getInt( 1 );
                 price = c.getInt( 2 );
@@ -61,13 +71,6 @@ public class CartActivity extends AppCompatActivity {
             } while (c.moveToNext());
         }
 
-        // End of new code
-
-        /*cartlist.add(new Cart( "AAA", "10", "20" ));
-        cartlist.add(new Cart( "BBB", "5", "30" ));
-        cartlist.add(new Cart( "CCC", "8", "40" ));
-        cartlist.add(new Cart( "DDD", "7", "50" ));
-        cartlist.add(new Cart( "EEE", "6", "10" ));*/
 
         return cartlist;
     }
