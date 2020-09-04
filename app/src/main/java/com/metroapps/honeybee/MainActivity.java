@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
 
                 smsIntent.setData(Uri.parse("0771825536"));
                 smsIntent.setType("vnd.android-dir/mms-sms");
@@ -92,7 +92,10 @@ public class MainActivity extends AppCompatActivity {
                 } catch (android.content.ActivityNotFoundException ex) {
                     Toast.makeText(MainActivity.this,
                             "SMS faild, please try again later.", Toast.LENGTH_SHORT).show();
-                }
+                }*/
+
+                Intent cart = new Intent(getApplicationContext(), CartActivity.class);
+                startActivity(cart);
             }
         });
 
