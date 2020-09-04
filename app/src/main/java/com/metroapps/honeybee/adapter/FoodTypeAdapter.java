@@ -32,11 +32,13 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.FoodTy
 
         ImageView foodTypeImage;
         TextView foodTypeName;
+        TextView foodTypePrice;
 
         public FoodTypeViewHolder(View view) {
             super(view);
             foodTypeImage = itemView.findViewById(R.id.foodTypeImage);
             foodTypeName = itemView.findViewById(R.id.foodTypeTitle);
+            foodTypePrice = itemView.findViewById(R.id.foodTypePrice);
         }
     }
 
@@ -48,8 +50,9 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.FoodTy
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FoodTypeViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull FoodTypeViewHolder holder, final int position) {
         holder.foodTypeName.setText(foodTypeList.get(position).getName());
+        holder.foodTypePrice.setText(foodTypeList.get(position).getPrice());
         Glide.with(context).load(foodTypeList.get(position).getImageUrl()).into(holder.foodTypeImage);
 
         //Onclick navigate to food description
@@ -57,6 +60,9 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.FoodTy
             @Override
             public void onClick(View v) {
                 Intent y = new Intent(context, Details.class);
+                y.putExtra("yname", foodTypeList.get(position).getName());
+                y.putExtra("yprice", foodTypeList.get(position).getPrice());
+                y.putExtra("yimage", foodTypeList.get(position).getImageUrl());
                 context.startActivity(y);
             }
         });

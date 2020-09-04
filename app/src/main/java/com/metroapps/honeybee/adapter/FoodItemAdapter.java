@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.metroapps.honeybee.Details;
+import com.metroapps.honeybee.Details1;
 import com.metroapps.honeybee.R;
 import com.metroapps.honeybee.model.FoodItem;
 
@@ -60,17 +60,16 @@ public class FoodItemAdapter extends RecyclerView.Adapter<FoodItemAdapter.FoodIt
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context, Details.class);
-                i.putExtra("ename",foodItemList.get(position).getName());
-                i.putExtra("eprice",foodItemList.get(position).getPrice());
-                i.putExtra("erestaurant",foodItemList.get(position).getRestaurantName());
-                i.putExtra("eimage",foodItemList.get(position).getImageUrl());
+                Intent i = new Intent(context, Details1.class);
+                i.putExtra("ename", foodItemList.get(position).getName());
+                i.putExtra("eprice", foodItemList.get(position).getPrice());
+                i.putExtra("erestaurant", foodItemList.get(position).getRestaurantName());
+                i.putExtra("eimage", foodItemList.get(position).getImageUrl());
                 context.startActivity(i);
             }
         });
 
     }
-
 
 
     @Override

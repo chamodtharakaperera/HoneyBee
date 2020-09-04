@@ -140,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
                     FoodType type = new FoodType();
                     type.setImageUrl(snapshot.child("imageurl").getValue().toString());
                     type.setName(snapshot.child("name").getValue().toString());
+                    type.setPrice(snapshot.child("price").getValue().toString());
 
                     FoodTypeList.add(type);
                 }
